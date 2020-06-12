@@ -236,19 +236,16 @@ const artists = [
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
-newArr = []
 paintersArr =[]
+newArr = []
 function get20s(data) {
   for(let i = 0; i < data.length; i++) {
     newArr.push(data[i].years.split("-"))
     if (newArr[i] > 1900 && newArr[i] < 2000 ){
-     paintersArr.push(i)
+     paintersArr.push(newArr.name)
     }
-
-
-
   }
-  return paintersArr
+  return newArr
 }
 console.log(get20s(artists))
 
@@ -306,10 +303,10 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(array){
-  const painters = []
-  for (let i = 0; i < array.paintings.length; i++) {
-    if (array.paintings[i].length > 100) {
-      painters.push(array.name[i]);
+  painters = []
+  for (let i = 0; i < array.length[i]; i++) {
+    if (array[i].paintings > 100) {
+      painters.push(i);
     }
   }
  return painters

@@ -159,10 +159,12 @@ button:hover{
         height: 50%;
         font-size: 1rem;
         margin-left: 1%;
+           
         
-        
+}
+nav a {
+    font-size:1.5rem;
+    
 
-        
-        
 }
 }
