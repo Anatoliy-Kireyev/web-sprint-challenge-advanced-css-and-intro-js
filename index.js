@@ -208,8 +208,8 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
-//console.log(artists[0]);
-//console.log(artists[1]);
+//console.log(artists[0].name);
+//console.log(artists[1].nia);
 
 
 
@@ -227,12 +227,12 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 
-/*function getArtistByIndex(array, index) {
-    return array[index]
+function getArtistByIndex(array, index) {
+    return   `The artist is ${array[index].name}`
   }
   
   console.log(getArtistByIndex(artists, 0));
-  /**
+  
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
@@ -241,13 +241,15 @@ newArr = []
 function get20s(data) {
   for(let i = 0; i < data.length; i++) {
     newArr.push(data[i].years.split("-"))
-    if (newArr[i] > 1900 && newArr[i] < 2000 ){
+    if (newArr[i][i] > 1900 && newArr[i][i] < 2000 ){
      paintersArr.push(newArr.name)
+    
     }
+    
   }
   return newArr
 }
-console.log(get20s(artists))
+//console.log(get20s(artists))
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
