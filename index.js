@@ -237,19 +237,20 @@ const artists = [
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 newArr = []
+paintersArr =[]
 function get20s(data) {
-  for(let i = 0; i < data.length; i++)
-  newArr = data.years.include("-")
-   {
-
+  for(let i = 0; i < data.length; i++) {
+    newArr.push(data[i].years.split("-"))
+    if (newArr[i] > 1900 && newArr[i] < 2000 ){
+     paintersArr.push(i)
+    }
 
 
 
   }
-
-  
-
+  return paintersArr
 }
+console.log(get20s(artists))
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -263,7 +264,7 @@ function get20s(data) {
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
-   return delete array[index]
+   return array.splice(index, 1);
 
   }
  // console.log(removeArtist(artists, 0))
@@ -308,12 +309,12 @@ function lotsOfArt(array){
   const painters = []
   for (let i = 0; i < array.paintings.length; i++) {
     if (array.paintings[i].length > 100) {
-      painter = push.array.name[i]
+      painters.push(array.name[i]);
     }
   }
- return painter
+ return painters
 }
-console.log(lotsOfArt(artists))
+//console.log(lotsOfArt(artists))
 
 
 
