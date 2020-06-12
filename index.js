@@ -231,24 +231,52 @@ function getArtistByIndex(array, index) {
     return   `The artist is ${array[index].name}`
   }
   
-  console.log(getArtistByIndex(artists, 0));
+  //console.log(getArtistByIndex(artists, 0));
   
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
-paintersArr =[]
+
 newArr = []
+paintersArr = []
 function get20s(data) {
+  
+  for(let i = 0; i < data.length; i++) {
+   newArr.push(data[i].years.split("-"))
+   if (newArr[i][0] > 1900 && newArr[i][1] < 2000) 
+   {
+   paintersArr.push(data[i].name)
+  }
+}
+  return paintersArr
+}
+
+//console.log(get20s(artists))
+
+/*function get20s(data) {
+  newArr = []
   for(let i = 0; i < data.length; i++) {
     newArr.push(data[i].years.split("-"))
-    if (newArr[i][i] > 1900 && newArr[i][i] < 2000 ){
-     paintersArr.push(newArr.name)
+    if (newArr[i] > 1900 && newArr[i][i] < 2000 ){
+     NewArr.push(newArr.name)
     
     }
     
   }
   return newArr
 }
+
+/*function rangeOfNumbers(array){
+  let newarr = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i] >= 10 && array[i] <= 15){
+      newarr.push(array[i]);
+    }
+  }
+  return newarr;
+}
+
+console.log(rangeOfNumbers(numbers));
 //console.log(get20s(artists))
 
 
@@ -260,15 +288,16 @@ function get20s(data) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19. 
  * 
- * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
+ * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left.
+ *  If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
    return array.splice(index, 1);
 
   }
- // console.log(removeArtist(artists, 0))
- // console.log(artists.length)
-  
+  //console.log(removeArtist(artists, 0))
+  //console.log(artists.length)
+  //console.log(artists)
   /**
 
 
@@ -289,7 +318,7 @@ At the end, this function should console.log() the new array with information ad
 newArtist =[];
 function addArtist(arr, id, name, years, genre, nationality, bio){
 
- arr.newArtist = {id, name, years, genre, nationality, bio}
+ arr.push({id, name, years, genre, nationality, bio}) 
  return arr
     
 
@@ -306,14 +335,14 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(array){
   painters = []
-  for (let i = 0; i < array.length[i]; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i].paintings > 100) {
-      painters.push(i);
+      painters.push[i];
     }
   }
  return painters
 }
-//console.log(lotsOfArt(artists))
+console.log(lotsOfArt(artists))
 
 
 
